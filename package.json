@@ -1,0 +1,23 @@
+{
+  "name": "alura-curso-node",
+  "version": "1.0.0",
+  "description": "Módulo de primeiros passos no curso de Node.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev":"nodemon server.js",
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "author": "Gabriel",
+  "license": "ISC",
+  "dependencies": {
+    "modulo-1": "^1.0.0",
+    "modulo-2": "^1.0.3",
+    "modulo-3": "^2.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "jest": "^27.2.1"
+  }
+ }
