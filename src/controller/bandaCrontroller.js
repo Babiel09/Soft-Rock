@@ -49,12 +49,12 @@ export default class bandaCrontroller {
     static async deletebanda(req, res) {
         try {
             const id = req.params.id;
-            const bandaToBeDeleted = await findByIdAndDelete(id);
+            const bandaToBeDeleted = await banda.findByIdAndDelete(id);
             res.status(204).send({server:"Banda Deletada com sucesso"});
             
         }catch(err) {
             console.log(err.message);
-            res.status(400).json({server:"Verifique os parâmetros da requisição PUT"});
+            res.status(400).json({server:"Verifique os parâmetros da requisição DELETE"});
         };
     };
 };

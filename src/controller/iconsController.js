@@ -1,4 +1,5 @@
 import { icons } from "../models/icons.js";
+import { banda } from "../models/banda.js";
 
 export default class iconsController {
 
@@ -15,10 +16,13 @@ export default class iconsController {
     };
 
     static async postIcon(req, res) {
+        const newIcon = req.body;
+
         try{
-            const icondata = req.body;
-            const newIcon = await icons.create(icondata);  
-            res.status(201).json(newIcon);
+            const findedBanda = await banda.findById(newIcon.banda);
+            const fullIcon = {... newIcon, banda: {...findedBanda._doc}};
+            const iconData = await icons.create(fullIcon);  
+            res.status(201).json(iconData);
         }
         catch(err){
             console.log(err.message);
