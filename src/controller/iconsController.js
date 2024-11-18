@@ -61,5 +61,17 @@ export default class iconsController {
             console.log(err);
             res.status(400).json({server: "Deu merda nessa requisição aí bro"});
         };
+
     }
+    static async serachIcon(req, res) {
+        const iconInSearchMode = req.query.icon;
+        try{
+            const findedIcon = await icons.find({nome: iconInSearchMode});
+            res.status(200).json(findedIcon);
+
+        } catch(err) {
+            console.log(err);
+            res.status(400).json({server: "Deu merda nessa requisição aí bro"});
+        };
+    };
 };
