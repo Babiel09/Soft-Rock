@@ -5,6 +5,8 @@ const iconsSchema = new mongoose.Schema({
     nome:{type: String, required:true},
     banda:{type: String, required:false},
     famoso:{type: Boolean, required:true},
-})
+}, {versionKey: false});
 
-export const icons = mongoose.model("icones", iconsSchema, "icons")
+const icons = mongoose.model("icones", iconsSchema, "icons");    
+
+export {icons, iconsSchema}

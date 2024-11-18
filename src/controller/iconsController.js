@@ -1,4 +1,4 @@
-import { icons } from "../models/model.js";
+import { icons } from "../models/icons.js";
 
 export default class iconsController {
 

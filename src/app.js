@@ -1,6 +1,5 @@
 import express from 'express'
 import dbConnection from './configs/databse.js';
-import { icons } from './models/model.js';
 import { routes } from './routes/route.js';
 
 const connection = await dbConnection();
