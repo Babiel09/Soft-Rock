@@ -1,0 +1,27 @@
+# Ignorar arquivos de variáveis de ambiente
+.env
+
+# Ignorar arquivos de logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar diretórios e arquivos de dependências
+node_modules/
+.bower_components/
+
+# Ignorar diretórios de builds
+dist/
+build/
+
+# Ignorar arquivos de configuração de IDEs e sistemas
+*.swp
+*.swo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos gerados por sistemas operacionais
+*.~lock.*
